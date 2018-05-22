@@ -8,17 +8,20 @@
   <body>
     <h1>Caesar Cipher</h1>
     <div>
-      <label>
-        <input type="radio" name="option" value="code"> Cifrar
-      </label>
-      <label>
-        <input type="radio" name="option" value="decipher"> Descifrar
-      </label>
-    </div>
-    <div>
       <form action="getform.php" method="get">
-       <label>Desplazamiento: <input type="text"></label><br>
-       <label>Texto: <input type="text"></label><input type="submit" value="Enviar"><br>
+       <label>Desplazamiento:<br>
+         <input type="text"><br>
+       </label><br>
+       <label>Texto:<br>
+         <textarea id="decrypted" placeholder="Ingresa tu palabra o cadena"></textarea>
+         <input type="submit" value="Enviar">
+       </label>
+       <br>
+       <label><br>Texto:<br>
+         <textarea id="decrypted" placeholder="Ingresa tu palabra o cadena"></textarea>
+         <input type="submit" value="Enviar">
+       </label>
+       <br>
        <fieldset>
          <legend>Resultado</legend>
          <output name="result"></output>
