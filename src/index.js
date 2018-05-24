@@ -1,11 +1,11 @@
-//codigo dd cifrado
-var option =parseInt(prompt('¿Que deseas hacer?\n 1.Cifrar\n 2.Descifrar'));
-var text = prompt('Ingresa tu texto o cadena').toUpperCase();
+///codigo dd cifrado
+var option =parseInt(document.getElementById("option"));
+var text = document.getElementById("text").toUpperCase();
 var displacement  = parseInt(prompt('Indica cuantos espacios van a desplazarse'));
 var sizetext = text.length;
 alert(sizetext);
 var index = 0;
-var letter = " ";
+var letter ="";
 var ofAscii='';
 var formula= '';
 
