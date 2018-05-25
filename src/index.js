@@ -1,4 +1,80 @@
-///codigo dd cifrado
+
+window.cipher = {
+  Cipher:(text,displacement)=>{
+    let i = 0;
+    const ofAscii='';
+    const formula= '';
+    text=text.toUpperCase();
+
+    for ( i; i <text.length; i++) {
+        if (text[i]!=" ") {
+          ascii=text.charCodeAt(i);
+          formula = ((ascii-65 + displacement)% 26) + 65;
+           ofAscii = String.fromCharCode(formula);
+         letter= letter+ ofAscii;
+       }else {
+          letter = letter + " ";
+        }
+       return (letter);
+   }
+  },
+  Decipher:(text,displacement)=> {
+    let i = 0;
+    const ofAscii='';
+    const formula= '';
+    text=text.toUpperCase();
+    for ( i; i <text.length ; i++) {
+        if (text[i]!=" ") {
+           formula = 90-(90 - text.charCodeAt(i)+ displacement)% 26;
+           ofAscii = String.fromCharCode(formula);
+          letter= letter+ ofAscii;
+       }else {
+          letter = letter + " ";
+       }
+        return (letter);
+   }
+
+    }
+
+  };
+
+
+
+
+
+  
+
+
+
+
+///
+
+document.getElementById('optionCifrar').addEventListener('click',function(){
+    let displacement =document.getElementById('displacement').value;
+    let text =document.getElementById("text").value;
+  const letter=cipher.Cipher(text,displacement);
+  let result =document.getElementById('result');
+     result.innerHTML=letter;
+});
+document.getElementById('optionDescifrar').addEventListener('click',function(){
+  let displacement =document.getElementById('displacement').value;
+  let text=document.getElementById("text").value;
+  const letter=cipher.Decipher(text,displacement);
+let result =document.getElementById('result');
+  result.innerHTML=letter;
+});
+
+
+
+
+
+
+
+
+
+
+
+
 var option =parseInt(document.getElementById("option"));
 var text = document.getElementById("text").toUpperCase();
 var displacement  = parseInt(prompt('Indica cuantos espacios van a desplazarse'));
