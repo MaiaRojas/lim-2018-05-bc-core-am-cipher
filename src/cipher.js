@@ -33,14 +33,13 @@ window.cipher = {
     let letter='';
     for ( i; i <text.length ; i++) {
         if (text[i]!=" ") {
-           formula = 90-(90 - text.charCodeAt(i)+ displacement)% 26;
+          ascii=text.charCodeAt(i);
+           formula = 90-(90 -ascii+ displacement)% 26;
            ofAscii = String.fromCharCode(formula);
           letter= letter+ ofAscii;
        }else {
           letter = letter + " ";
-       }  
+       }
    }
    return (letter);
     };
-
- 
