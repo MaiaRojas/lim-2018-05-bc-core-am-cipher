@@ -38,10 +38,9 @@ window.cipher = {
           letter= letter+ ofAscii;
        }else {
           letter = letter + " ";
-       }
-        return (letter);
+       }  
    }
-
-    }
+   return (letter);
+    };
 
  
