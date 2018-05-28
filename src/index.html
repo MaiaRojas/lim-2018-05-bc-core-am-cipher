@@ -3,39 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
   </head>
-  <body>
-    <h1>Caesar Cipher</h1>
-    <div>
+  <body class='cuerpo'>
+      <header class='encabezado'>
+        <h1>Caesar Cipher</h1>
+      </header>
+      <main class="div" id='main'>
+          <header class='encabezado' >
+             <h2>¿Qué es y para qué sirve?</h2>
+          </header>
+             <p>Caesar Cipher es una herramienta que te permite cifrar y descifrar texto a partir de un <a href='https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar'>cifrado por sustitución</a>.</p>
+             <p>Para cifrar/descifrar un texto simplemente hay que elegir la opcion deseada y poner en el recuadro superio el texto que quieres cifrar/descifrar . Después de enviardo desaparecerá el texto original del recuadro y aparecerá el texto cifrado disponible para copiar.</p>
+             <p>Este resultado sirve para enviarlo por mensaje a un amigo con contenido delicado o guardarlo en un documento de texto en donde todos los datos importantes están cifrados. En resumen, nos ofrece la seguridad de que nadie que no sepa el número de desplazamiento podrá leerlo y la comodidad de tener un pequeño código que podemos pegar donde sea y descifrar desde cualquier plataforma siempre que tengamos acceso a Internet.</p>
       
-       <label >Desplazamiento:<br>
-         <input type='text' id='displacement't><br>
-       </label><br>
-       <label>Texto:<br>
-         <textarea id='text'maxlength='2000' placeholder="Ingresa tu palabra o cadena"></textarea>
-         <button id="cifrar">Cifrar</button>
-          <button id="descifrar">Descifrar</button>
-       </label>
-       <br>
-       <fieldset>
-         <legend>Resultado</legend>
-         <output name="result" id= 'result'></output>
-       </fieldset>
-      
-    </div>
-    <div id="root">
-      <div>
-        <h3>Caesar Cipher</h3>
-        <h4>¿Qué es y para qué sirve?</h4>
-      </div>
-      <div>
-        <p>Caesar Cipher es una herramienta que te permite cifrar y descifrar texto a partir de un <a href='https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar'>cifrado por sustitución</a>.</p>
-        <p>Para cifrar/descifrar un texto simplemente hay que elegir la opcion deseada y poner en el recuadro superio el texto que quieres cifrar/descifrar . Después de enviardo desaparecerá el texto original del recuadro y aparecerá el texto cifrado disponible para copiar.</p>
-        <p>Este resultado sirve para enviarlo por mensaje a un amigo con contenido delicado o guardarlo en un documento de texto en donde todos los datos importantes están cifrados. En resumen, nos ofrece la seguridad de que nadie que no sepa el número de desplazamiento podrá leerlo y la comodidad de tener un pequeño código que podemos pegar donde sea y descifrar desde cualquier plataforma siempre que tengamos acceso a Internet.</p>
-      </div>
-    </div>
-
+      </main>
+      <section class='div'id='section'>
+         <input class='text'type='text' id='offset'placeholder='ingresar n° de offset'><br>
+         <br>
+         <input class='text' type= 'text' id='text'maxlength='2000' placeholder="Ingresar texto"></input>
+         <br><br>
+         <button class='button'id="cifrar">Cifrar</button>
+         <button class='button' id="descifrar">Descifrar</button>
+         <br><br>
+         <output class= 'text'name="result" id= 'result'>Resultado</output>
+     </section>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

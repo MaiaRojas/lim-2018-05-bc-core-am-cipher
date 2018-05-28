@@ -1,0 +1,47 @@
+.cuerpo{
+    background-color: LightGray;
+    font-size: Verdana;
+
+}
+.text{
+    color:grey;
+    font-size:30px;
+    border-radius: 20px;
+    border:#FFF5EE;
+    padding:5px 15px;
+    background-color:#FFF5EE; 
+ }
+header {
+    text-align: center;
+    height:5%;
+    width:90%;
+    display:inline-block;
+}
+.button{
+    color:white;
+    font-size:30px;
+    background-color:deeppink;
+    border-radius: 20px;
+    border: #FFF5EE;
+    padding :10px 30px;
+}
+.encabezado{ 
+
+    color:white;
+    margin:5px;   
+    border-radius:5px; 
+    background-color:deeppink ;
+}
+.div{
+ display:inline-block;
+ height:90%;
+ width: 45%; 
+ margin:10px 11px;
+}
+#section{
+    float: right;
+ 
+}
+#main{
+    float: left;
+}
