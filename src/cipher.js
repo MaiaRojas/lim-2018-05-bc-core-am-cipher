@@ -41,8 +41,8 @@ window.cipher = {
     },
 createCipherWithOffset: (offset)=>{
   return  {
-      encode :(text)=>{return cipher.encode(text, offset)},
-      decode :(text)=>{return cipher.decode(text,offset)}
+      encode (text){return cipher.encode(text, offset)},
+      decode (text){return cipher.decode(text,offset)}
     
   }
 }
