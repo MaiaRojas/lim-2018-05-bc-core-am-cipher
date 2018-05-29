@@ -39,12 +39,12 @@ window.cipher = {
    }
    return (letter);
     },
-  createCipherWithOffset (offset){
-    return  {
-      encode0 (text){return cipher.encode(text, offset)},
-      decode0 (text){return cipher.decode(text,offset)}
-      };
+createCipherWithOffset: (offset)=>{
+  return  {
+      encode :(text)=>{return cipher.encode(text, offset)},
+      decode :(text)=>{return cipher.decode(text,offset)}
     
   }
-  
-  };
+}
+};
+

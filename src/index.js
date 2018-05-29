@@ -1,8 +1,10 @@
+
 document.getElementById('cifrar').addEventListener('click',function(){
   let offset =document.getElementById('offset').value;
   offset=parseInt(offset);
   let text =document.getElementById("text").value;
-  let word=(cipher.createCipherWithOffset(offset)).encode0(text);
+ // console.log(cipher.encode(text,offset));
+  let word=(cipher.createCipherWithOffset(offset)).encode(text);
 let result =document.getElementById('result');
    result.innerHTML=word;
 });
@@ -12,7 +14,8 @@ document.getElementById('descifrar').addEventListener('click',function(){
 let offset =document.getElementById('offset').value;
 offset=parseInt(offset);
 let text=document.getElementById("text").value;
-let word2=(cipher.createCipherWithOffset(offset)).decode0(text);
+//console.log(cipher.decode(text,offset));
+let word2=(cipher.createCipherWithOffset(offset)).decode(text);
 let result =document.getElementById('result');
 result.innerHTML=word2;
 });
