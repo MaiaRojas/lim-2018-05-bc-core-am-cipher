@@ -1,49 +1,52 @@
-.cuerpo{
-    background-color: LightGray;
-    font-size: Verdana;
+body{
+    background-image: url(invierno-parque.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
 
 }
-.text{
-    float:center;
-    color:grey;
-    font-size:30px;
-    border-radius: 20px;
-    border:#FFF5EE;
-    padding:5px 15px;
-    background-color:#FFF5EE; 
-    margin:10px 55px;
- }
-header {
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 9px;
+}
+h1{
+    color: white;
     text-align: center;
-    height:5%;
-    width:90%;
-    display:block;
-    float:center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
-.button{
-    color:white;
-    font-size:30px;
-    background-color:deeppink;
+input, textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+textarea{
+    min-height: 250px;
+    max-height: 350px;
+    max-width: 100%;
+}
+.button{    
     border-radius: 20px;
-    border: #FFF5EE;
-    padding :10px 30px;
-    display: inline-block;
-}
-.encabezado{ 
+    background: #31384A;
+    color:#fff ;
+    padding: 20px;
 
-    color:white;
-    margin:5px;   
-    border-radius:5px; 
-    background-color:deeppink ;
-}
-.div{
- display:inline-block;
- height:90%;
- width: 45%; 
- margin:10px 300px;
-}
-#buttons{
-    margin: 10px 50px 10px 50px;
-    float:center;
-}
 
+}
+.button:hover{
+    cursor: pointer;
+}
+@media(max-height:480px){
+     form{
+         width: 100%;
+     }
+}
