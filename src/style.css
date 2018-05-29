@@ -4,18 +4,21 @@
 
 }
 .text{
+    float:center;
     color:grey;
     font-size:30px;
     border-radius: 20px;
     border:#FFF5EE;
     padding:5px 15px;
     background-color:#FFF5EE; 
+    margin:10px 55px;
  }
 header {
     text-align: center;
     height:5%;
     width:90%;
-    display:inline-block;
+    display:block;
+    float:center;
 }
 .button{
     color:white;
@@ -24,6 +27,7 @@ header {
     border-radius: 20px;
     border: #FFF5EE;
     padding :10px 30px;
+    display: inline-block;
 }
 .encabezado{ 
 
@@ -36,12 +40,10 @@ header {
  display:inline-block;
  height:90%;
  width: 45%; 
- margin:10px 11px;
+ margin:10px 300px;
 }
-#section{
-    float: right;
- 
+#buttons{
+    margin: 10px 50px 10px 50px;
+    float:center;
 }
-#main{
-    float: left;
-}
+

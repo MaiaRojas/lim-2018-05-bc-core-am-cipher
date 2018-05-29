@@ -1,6 +1,6 @@
 
 window.cipher = {
-  encode:(text,offset)=> {
+  encode (text,offset) {
       let i = 0;
       let ofAscii='';
       let formula= '';
@@ -18,8 +18,9 @@ window.cipher = {
           }
      }
      return (letter);
+     
     },
-  decode:(text,offset)=>{
+  decode (text,offset){
     let i = 0;
     let ofAscii='';
     let formula= '';
@@ -38,10 +39,12 @@ window.cipher = {
    }
    return (letter);
     },
-  createCipherWithOffset : (offset)=>{
-    return window.cipher0 = {
-      encode0 :(text)=>{return cipher.encode(text,offset)},
-      decode0 :(text)=>{return cipher.decode(text,offset)}
-    };
+  createCipherWithOffset (offset){
+    return  {
+      encode0 (text){return cipher.encode(text, offset)},
+      decode0 (text){return cipher.decode(text,offset)}
+      };
+    
   }
+  
   };
