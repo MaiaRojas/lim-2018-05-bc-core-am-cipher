@@ -1,50 +1,51 @@
 
 window.cipher = {
-  encode(text, offset) {
+  encode(string, offset) {
     let i = 0;
-    let ofAscii = '';
-    let formula = '';
-    let ascii = '';
-    text = text.toUpperCase();
-    let letter = '';
-    for (i; i < text.length; i++) {
-      if (text[i] != " ") {
-        ascii = text.charCodeAt(i);
-        formula = ((ascii - 65 + offset) % 26) + 65;
-        ofAscii = String.fromCharCode(formula);
-        letter = letter + ofAscii;
-      } else {
-        letter += " ";
+    let ASCIIcode = '';
+    let codeFormula = '';
+    let convertingTotheAlphabet = '';
+    string = string.toUpperCase();
+    let stringCipher = '';
+    for (i; i < string.length; i++) {
+        ASCIIcode = string.charCodeAt(i); 
+        if (string[i] != " ") {  
+          codeFormula = ((ASCIIcode - 65 + offset) % 26) + 65;
+          convertingTotheAlphabet = String.fromCharCode(codeFormula);
+          stringCipher = stringCipher + convertingTotheAlphabet;
+        } else {
+          stringCipher += " "; 
       }
     }
-    return (letter);
+    return (stringCipher);
 
   },
-  decode(text, offset){
+  decode(string, offset){
     let i = 0;
-    let ofAscii = '';
-    let formula = '';
-    let ascii = '';
-    text = text.toUpperCase();
-    let letter = '';
-    for (i; i < text.length; i++) {
-      if (text[i] != " ") {
-        ascii = text.charCodeAt(i);
-        formula = 90 - (90 - ascii + offset) % 26;
-        ofAscii = String.fromCharCode(formula);
-        letter = letter + ofAscii;
+    let convertingTotheAlphabet = '';
+    let codeFormula = '';
+    let ASCIIcode = '';
+    string = string.toUpperCase();
+    let stringCipher = '';
+    for (i; i < string.length; i++) {
+      if (string[i] != " ") {
+        ASCIIcode = string.charCodeAt(i);
+        codeFormula = 90 - (90 -ASCIIcode + offset) % 26;
+        convertingTotheAlphabet = String.fromCharCode(codeFormula);
+        stringCipher = stringCipher + convertingTotheAlphabet;
       } else {
-        letter += " ";
+          stringCipher += " ";
       }
     }
-    return (letter);
+          return (stringCipher);
   },
   createCipherWithOffset (offset){
     const result = {
-      encode (text){return cipher.encode(text, offset)},
-      decode (text){return cipher.decode(text, offset)}
+      encode  (string){return cipher.encode(string, offset)},
+      decode (string){return cipher.decode(string, offset)}
     };
     return result
   }
 };
+
 
