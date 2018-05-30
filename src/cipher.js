@@ -14,7 +14,7 @@ window.cipher = {
         ofAscii = String.fromCharCode(formula);
         letter = letter + ofAscii;
       } else {
-        letter = " ";
+        letter += " ";
       }
     }
     return (letter);
@@ -34,12 +34,12 @@ window.cipher = {
         ofAscii = String.fromCharCode(formula);
         letter = letter + ofAscii;
       } else {
-        letter = " ";
+        letter += " ";
       }
     }
     return (letter);
   },
-  createCipherWithOffset: (offset) => {
+  createCipherWithOffset (offset){
     const result = {
       encode (text){return cipher.encode(text, offset)},
       decode (text){return cipher.decode(text, offset)}
