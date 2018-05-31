@@ -14,8 +14,8 @@ describe('cipher', () => {
         assert.equal(cipher.encode("ABCDEFGHIJKLMNOPQRSTUVWXYZ",33),"HIJKLMNOPQRSTUVWXYZABCDEFG" );
      });
      
-     it('debería retornar "O V S H" para "H O L A" con offset 33',() =>{
-      assert.equal(cipher.decode("O V S H",33),"H O L A"); 
+     it('debería retornar "lqltwsv #4" para "ejemplo #1" con offset 33',() =>{
+      assert.equal(cipher.encode("ejemplo #1",33),"lqltwsv #4"); 
      });
     
   });
@@ -29,8 +29,8 @@ describe('cipher', () => {
     it('debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offset 33',() =>{
         assert.equal(cipher.decode("HIJKLMNOPQRSTUVWXYZABCDEFG",33),"ABCDEFGHIJKLMNOPQRSTUVWXYZ" );
      });
-     it('debería retornar "H O L A" para "O V S H" con offset 33',() =>{
-      assert.equal(cipher.encode("H O L A",33),"O V S H"); 
+     it('debería retornar "ejemplo #1" para "lqltwsv #4" con offset 33',() =>{
+      assert.equal(cipher.decode("lqltwsv #4",33),"ejemplo #1"); 
      }); 
     
      
@@ -42,10 +42,18 @@ describe('cipher', () => {
     });
 
     it('debería retornar un objeto con dos funciones (encode y decode) con offset fijado', () => {
+      assert.equal(typeof cipher.createCipherWithOffset(33),'object');
       assert.property(cipher.createCipherWithOffset(33),'encode');
       assert.property(cipher.createCipherWithOffset(33),'decode');
     });
 
+    it('debería retornar una función llamada (encode y decode) con offset fijado ', () => {
+      assert.equal((cipher.createCipherWithOffset(33)).encode("abc"),cipher.encode("abc",33));
+      assert.equal((cipher.createCipherWithOffset(33)).decode("abc"),cipher.decode("abc",33));
+    });
+    
+
   });
 });
+
 });
