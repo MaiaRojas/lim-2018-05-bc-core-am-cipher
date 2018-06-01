@@ -4,34 +4,21 @@
     <meta charset= "utf-8" >
     <title>Cifrado Cesar</title>
     <link rel= "stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum scale-1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   </head>
   <body class= "cuerpo" >
      <div class="contenedor">
        <header><h1>Cifrado  Cesar</h1></header>
        <main>
-         <h4>Cifra tu mensaje</h4>
-         <input class = "text" type = "text" id = "offset" placeholder = "ingresar n° de offset" >
-         <input class = "text" type = "text" id = "string" maxlength = "2000" placeholder = "Ingresar texto" >
+         <h4>Cifra un mensaje!😊</h4>
+         <input class = "text" type = "number" name="quantity" min="1" max="26" id = "offset" placeholder = "ingresar desplazamiento" >
+         <input class = "text" type = "text" id = "string" maxlength = "2000" placeholder = "Ingresar texto" ></input>
           <input type= "button" class="button" id="cifrar" value= "Cifrar" />
           <input type= "button" class="button" id="descifrar" value = "Descifrar" />
         <textarea class= "text"  id = "result"  readonly></textarea>
+        <input class= "button"type="reset">
        </main>
-       <div class="instrucciones">
-           <h5>                       <br>
-              
-              El  cifrado Cesár mueve <br>
-               cada letra un determinado<br>
-               número de espacios <br>
-               en el alfabeto.
-               Si por ejemplo usamos un<br> 
-               desplazamiento de 3 espacios,<br>
-              una A en el texto original<br>
-               se convierte en una C en el<br> 
-               texto codificado           <br>
-                                          <br>
-                                          </h5>
-      </div>
+
       </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

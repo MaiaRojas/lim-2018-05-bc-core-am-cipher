@@ -6,7 +6,7 @@ body{
 
 }
 .contenedor{
-width:80%;
+width:40%;
 max-width:1000px;
 padding: 20px;
 box-sizing: border-box;
@@ -18,21 +18,11 @@ header{
     background: #31384A;
     color: white;
 }
-.instrucciones{
-    width: 45%;
-    margin: auto;
-    background: rgba(0,0,0,0.4);
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 1%;
-    border-radius: 9px;
-    float:left;
-}
-
 main{
-    width: 45%;
+    min-height: 500px;
+    width: 100%;
     margin: auto;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     box-sizing: border-box;
     margin: 1%;
@@ -45,15 +35,16 @@ h1,h4{
     margin: 0;
     font-size: 30px;
     margin-bottom: 20px;
-}h5{
+}
+ul{
     color: white;
     text-align: center;
     margin: 0;
-    font-size: 30px;
+    font-size:20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-bottom: 20px;padding: 10px;
     box-sizing: border-box;
     background: #31384A;
-
 }
 
 input, textarea {
@@ -66,7 +57,7 @@ input, textarea {
     float: left;
 }
 textarea{
-    min-height: 146px;
+    min-height: 150px;
     max-height: 250px;
     max-width: 100%;
 }
@@ -75,8 +66,6 @@ textarea{
     background: #31384A;
     color:#fff ;
     padding: 20px;
-
-
 }
 .button:hover{
     cursor: pointer;
@@ -85,19 +74,13 @@ textarea{
      main{
          width: 100%;
      }
-     .instrucciones{
-         width: 100%;
-     }
-}
+    }
 @media screen and (max-width: 800px){
     main{
         width:100%;
     }
-    .instrucciones{
-        width: 100%;
-    }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px){
     .contenedor {
         width:100%;
     }

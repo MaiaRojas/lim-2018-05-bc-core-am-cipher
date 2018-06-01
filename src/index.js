@@ -1,11 +1,12 @@
 document.getElementById('cifrar').addEventListener('click',function(){
   let offset =document.getElementById('offset').value;
-  offset=parseInt(offset);
+      offset=parseInt(offset);
   let string =document.getElementById("string").value;
  // console.log(cipher.encode(text,offset));
   let word=(cipher.createCipherWithOffset(offset)).encode(string);
-let result =document.getElementById('result');
-   result.innerHTML=word;
+  let result =document.getElementById("result");
+      result.innerHTML=word;
+ 
 });
 
 

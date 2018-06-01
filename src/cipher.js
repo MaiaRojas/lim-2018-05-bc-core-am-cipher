@@ -1,6 +1,6 @@
 
 window.cipher = {
-  encode(string, offset) {
+  encode(offset,string) {
     let i = 0;
     let ASCIIcode = '';
     let codeFormula = '';
@@ -32,7 +32,7 @@ window.cipher = {
       }
     return (stringCipher); },
 
-  decode(string, offset){
+  decode(offset,string){
     let i = 0;
     let convertingTotheAlphabet = '';
     let codeFormula = '';
@@ -65,8 +65,8 @@ window.cipher = {
   },
   createCipherWithOffset (offset){
     const result = {
-      encode  (string){return cipher.encode(string, offset)},
-      decode (string){return cipher.decode(string, offset)}
+      encode  (string){return cipher.encode(offset, string)},
+      decode (string){return cipher.decode(offset, string)}
     };
     return result
   }
