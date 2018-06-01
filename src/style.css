@@ -24,7 +24,7 @@ header{
     background: rgba(0,0,0,0.4);
     padding: 20px;
     box-sizing: border-box;
-    margin: 20px;
+    margin: 1%;
     border-radius: 9px;
     float:left;
 }
@@ -35,7 +35,7 @@ main{
     background: rgba(0,0,0,0.4);
     padding: 20px;
     box-sizing: border-box;
-    margin: 20px;
+    margin: 1%;
     border-radius: 9px;
     float:left;
 }
