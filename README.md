@@ -1,6 +1,10 @@
 # Cifrado César
-![texto cifrado](https://cde.peru.com//ima/0/1/7/6/0/1760604/924x530/whatsapp.jpg) ![Mensaje recibido](https://ksassets.timeincuk.net/wp/uploads/sites/46/2017/02/phone-giphy.gif)
-![Mensaje recibido](https://i.gifer.com/Q3DM.gif)
+<img src="https://cde.peru.com//ima/0/1/7/6/0/1760604/924x530/whatsapp.jpg" alt="Drawing" style="width: 200px; height:200px;"/>
+<img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.15752-9/34319454_2056738191267075_561398344946024448_n.png?_nc_cat=0&oh=f8f0ff1f92b2d088f7a4913140ba6c6d&oe=5B7ABF61" alt="Drawing" style="width: 200px; height:200px"/>
+<img src="https://ksassets.timeincuk.net/wp/uploads/sites/46/2017/02/phone-giphy.gif" alt="Drawing" style="width: 200px; height:200px"/>
+<img src="https://i.gifer.com/Q3DM.gif" alt="Drawing" style="width: 200px; height:200px"/>
+
+
 
 
 ## Preámbulo
