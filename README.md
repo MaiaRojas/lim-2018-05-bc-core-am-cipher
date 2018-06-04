@@ -1,5 +1,7 @@
 # Cifrado César
-![texto cifrado](mensaje-cifrado.jpg) ![Mensaje recibido](gif-teléfono.gif)
+![texto cifrado](https://cde.peru.com//ima/0/1/7/6/0/1760604/924x530/whatsapp.jpg) ![Mensaje recibido](https://ksassets.timeincuk.net/wp/uploads/sites/46/2017/02/phone-giphy.gif)
+![Mensaje recibido](https://i.gifer.com/Q3DM.gif)
+
 
 ## Preámbulo
 
