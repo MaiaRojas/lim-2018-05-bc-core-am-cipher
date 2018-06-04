@@ -1,74 +1,84 @@
-
+//el objeto cipher tiene funciones: encode, decode y createCipherWhitOffset.
 window.cipher = {
-  encode(offset,string) {
-    let i = 0;
-    let ASCIIcode = '';
-    let codeFormula = '';
-    let convertingTotheAlphabet = '';
-   // let invalidSymbol="ø";
-   // string = string.toUpperCase();
-    let stringCipher = '';
-      for (i; i < string.length; i++) {
-          ASCIIcode = string.charCodeAt(i);
-          //mayusculas 
-          if (ASCIIcode>=65 && ASCIIcode<=90) {  
-            codeFormula = ((ASCIIcode - 65 + offset) % 26) + 65;
-            convertingTotheAlphabet = String.fromCharCode(codeFormula);
-            stringCipher = stringCipher + convertingTotheAlphabet;
-          // minusculas 
-          }else if(ASCIIcode>=97 && ASCIIcode<=122){
-            codeFormula = ((ASCIIcode - 97 + offset) % 26) + 97;
-            convertingTotheAlphabet = String.fromCharCode(codeFormula);
-            stringCipher = stringCipher + convertingTotheAlphabet;
-          //numeros
-          }else if (ASCIIcode>=48 && ASCIIcode<=57){
-            codeFormula = ((ASCIIcode - 48 + offset) % 10) + 48;
-            convertingTotheAlphabet = String.fromCharCode(codeFormula);
-            stringCipher = stringCipher + convertingTotheAlphabet;
-          }else{
-            //defecto
-            stringCipher = stringCipher + String.fromCharCode(string.charCodeAt(i));
-          }
-      }
-    return (stringCipher); },
-
-  decode(offset,string){
-    let i = 0;
-    let convertingTotheAlphabet = '';
-    let codeFormula = '';
-    let ASCIIcode = '';
-    //let invalidSymbol="ø";
-    //string = string.toUpperCase();
-    let stringCipher = '';
+  /*función encode: recibe el offset y string del html, 
+  dentro tiene un bucle for que recorre cada letra de la cadena de texto para obtener su código ASCII.*/
+  encode (offset,string) {
+    let i=0;
+    let stringCipher = "";
     for (i; i < string.length; i++) {
-      ASCIIcode = string.charCodeAt(i);
+      let ASCIICodeOfTheLetter = string.charCodeAt(i);
+      /*codeFormula:(ASCIICodeOfTheLetter - smallerNumberOfTheASCIICodeRange + offset) % numberOfLetters + smallerNumberOfTheASCIICodeRange*/
+      let codeFormula = "";
+      let convertingTotheAlphabet = "";      
       //mayusculas
-      if (ASCIIcode>=65 && ASCIIcode<=90) {
-        codeFormula = 90 - (90 -ASCIIcode + offset) % 26;
-        convertingTotheAlphabet = String.fromCharCode(codeFormula);
-        stringCipher = stringCipher + convertingTotheAlphabet;
-     //minussculas
-      } else if(ASCIIcode>=97 && ASCIIcode<=122){
-        codeFormula = 122-(122-ASCIIcode + offset) % 26;
-        convertingTotheAlphabet = String.fromCharCode(codeFormula);
-        stringCipher = stringCipher + convertingTotheAlphabet;
-      //números
-      } else if (ASCIIcode>=48 && ASCIIcode<=57){
-         codeFormula = 57-(57-ASCIIcode + offset) % 10;
+      //Si el código ASCII es mayor igual que 65 y menor igual que 90 será cifrada con una mayúscula. 
+      if (ASCIICodeOfTheLetter >= 65 && ASCIICodeOfTheLetter <= 90) {
+         codeFormula = ((ASCIICodeOfTheLetter - 65 + offset)% 26) + 65;
          convertingTotheAlphabet = String.fromCharCode(codeFormula);
-        stringCipher = stringCipher + convertingTotheAlphabet;
-         } else{
-        //defecto
-        stringCipher = stringCipher + String.fromCharCode(string.charCodeAt(i));      }
+         stringCipher = stringCipher + convertingTotheAlphabet;
+         // minusculas 
+         //Si el código ASCII es mayor igual que 97 y menor igual que 122  cifrada por una minúscula.
+      }else if (ASCIICodeOfTheLetter >= 97 && ASCIICodeOfTheLetter <= 122){ 
+         codeFormula = ((ASCIICodeOfTheLetter - 97 + offset) % 26) + 97;
+         convertingTotheAlphabet = String.fromCharCode(codeFormula);
+         stringCipher = stringCipher + convertingTotheAlphabet;
+         //numeros
+         //Si el código ASCII es mayor igual que 48 y menor igual que 57 será  cifrado por un número 
+      }else if (ASCIICodeOfTheLetter >= 48 && ASCIICodeOfTheLetter <= 57){        
+         codeFormula = ((ASCIICodeOfTheLetter - 48 + offset) % 10) + 48;
+         convertingTotheAlphabet = String.fromCharCode(codeFormula);
+         stringCipher = stringCipher + convertingTotheAlphabet;
+         //defecto
+         //cualquier otro caracter será reemplazado por sí mismo.
+      }else{
+         stringCipher = stringCipher + String.fromCharCode(string.charCodeAt(i));
+      }
     }
-          return (stringCipher);
+    return (stringCipher); 
+ },
+
+ /*función decode: recibe el offset y string del html, 
+  dentro tiene un bucle for que recorre cada letra de la cadena de texto para obtener su código ASCII.*/
+  decode(offset,string){
+    let i=0;
+    let stringDecipher = '';
+    for (i; i < string.length; i++) {
+      let convertingTotheAlphabet = '';
+      /*decodeFormula: greaterNumberOfTheASCIICodeRange-(greaterNumberOfTheASCIICodeRange-ASCIICodeOfTheLetter + offset) % numberOfLetters */ 
+      let decodeFormula = '';
+      let ASCIICodeOfTheLetter = string.charCodeAt(i);
+      //mayusculas
+      //Si el código ASCII es mayor igual que 65 y menor igual que 90 será descifrada con una mayúscula.
+      if (ASCIICodeOfTheLetter >= 65 && ASCIICodeOfTheLetter <= 90) {
+        decodeFormula = 90 - (90 -ASCIICodeOfTheLetter + offset) % 26;
+        convertingTotheAlphabet = String.fromCharCode(decodeFormula);
+        stringDecipher = stringDecipher + convertingTotheAlphabet;
+        //minussculas
+        //Si el código ASCII es mayor igual que 97 y menor igual que 122  descifrada por una minúscula.
+      } else if(ASCIICodeOfTheLetter >= 97 && ASCIICodeOfTheLetter <= 122){
+        decodeFormula = 122-(122-ASCIICodeOfTheLetter + offset) % 26;
+        convertingTotheAlphabet = String.fromCharCode(decodeFormula);
+        stringDecipher = stringDecipher + convertingTotheAlphabet;
+         //números
+         //Si el código ASCII es mayor igual que 48 y menor igual que 57 será  descifrado por un número 
+      } else if (ASCIICodeOfTheLetter >= 48 && ASCIICodeOfTheLetter <= 57){
+         decodeFormula = 57 - (57 - ASCIICodeOfTheLetter + offset) % 10;
+         convertingTotheAlphabet = String.fromCharCode(decodeFormula);
+         stringDecipher = stringDecipher + convertingTotheAlphabet;
+         //defecto
+        //cualquier otro caracter será reemplazado por sí mismo.
+      } else{
+          stringDecipher = stringDecipher + String.fromCharCode(string.charCodeAt(i));     
+      }
+    }
+   return (stringDecipher);
   },
   createCipherWithOffset (offset){
-    const result = {
+    return {
       encode  (string){return cipher.encode(offset, string)},
       decode (string){return cipher.decode(offset, string)}
     };
-    return result
+    
   }
 };
 

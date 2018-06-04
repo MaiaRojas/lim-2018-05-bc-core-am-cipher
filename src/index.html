@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang = "es">
   <head>
-    <meta charset= "utf-8" >
+    <meta charset= "utf-8">
     <title>Cifrado Cesar</title>
-    <link rel= "stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel = "stylesheet" href = "style.css"/>
+    <meta name = "viewport" content = "width=device-width, user-scalable=no, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0">
   </head>
-  <body class= "cuerpo" >
-     <div class="contenedor">
-       <header><h1>Cifrado  Cesar</h1></header>
-       <main>
-         <h4>Cifra un mensaje!😊</h4>
-         <input class = "text" type = "number" name="quantity" min="1" max="26" id = "offset" placeholder = "ingresar desplazamiento" >
-         <input class = "text" type = "text" id = "string" maxlength = "2000" placeholder = "Ingresar texto" ></input>
-          <input type= "button" class="button" id="cifrar" value= "Cifrar" />
-          <input type= "button" class="button" id="descifrar" value = "Descifrar" />
-        <textarea class= "text"  id = "result"  readonly></textarea>
-        <input class= "button"type="reset">
-       </main>
-
-      </div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
+  <body class = "cuerpo">
+   <div class = "contenedor">
+     <form id = "myForm">
+       <h1>Cifrado César</h1>
+       <input class = "text" type = "number" name = "quantity" min = "1" max = "26" id = "offset" placeholder = "ingresar desplazamiento">
+       <input class = "text" type = "text" id = "string" maxlength = "2000" placeholder = "Ingresar texto">
+       <div class = "botones">
+       <input class = "button" type = "button"  id = "cifrar" value = "Cifrar">
+       <input class = "button" type = "button"  id = "descifrar" value = "Descifrar">
+       </div>
+       <textarea class = "text"  id = "textOutput"  readonly></textarea>
+       <input class = "button" type = "reset" id = "cleanForm" value = "Limpiar">
+     </form>
+   </div>
+   <script src = "cipher.js"></script>
+   <script src = "index.js"></script>
   </body>
 </html>
 
